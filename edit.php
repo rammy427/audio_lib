@@ -6,7 +6,7 @@
     <body>
         <?php include "navigation.html"; ?>
         <h1 class="my-5 text-center">Añadir o editar audiolibro</h1>
-        <form class="col-sm-6 mx-auto">
+        <form class="col-sm-6 mx-auto" action="insert.php" method="post">
             <div class="row">
                 <div class="col">
                     <label for="title">Título del libro</label>
