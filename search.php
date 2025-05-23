@@ -29,7 +29,6 @@ $result = mysqli_query($connection, $query);
                     <?php
                     while ($row = mysqli_fetch_array($result))
                     {
-                        // print "hola";
                         print "<tr>";
                             print "<td>";
                                 print $row["title"];

@@ -33,7 +33,6 @@ $result = mysqli_query($connection, $query);
                     <?php
                     while ($row = mysqli_fetch_array($result))
                     {
-                        // print "hola";
                         print "<tr>";
                             print "<td>";
                                 print $row["title"];
@@ -54,8 +53,10 @@ $result = mysqli_query($connection, $query);
                                 print $row["audio_path"];
                             print "</td>";
                             print "<td>";
-                                print '<button class="btn btn-lg btn-primary text-white mx-1"><i class="bi bi-pencil-square"></i></button>';
-                                print '<button class="btn btn-lg btn-danger"><i class="bi bi-trash3-fill"></i></button>';
+                                print "<button class=\"btn btn-lg btn-primary text-white mx-1\"><i class=\"bi bi-pencil-square\"></i></button>";
+                                print '<a href="delete.php?id='.$row["book_id"].'">';
+                                    print "<button class=\"btn btn-lg btn-danger\"><i class=\"bi bi-trash3-fill\"></i></button>";
+                                print "</a>";
                             print "</td>";
                         print "</tr>";
                     }
