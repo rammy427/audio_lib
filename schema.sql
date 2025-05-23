@@ -20,12 +20,12 @@ CREATE TABLE authors (
 CREATE TABLE user_books (
 	user_id INT,
 	book_id INT,
-	FOREIGN KEY (user_id) REFERENCES users(user_id),
-	FOREIGN KEY (book_id) REFERENCES books(book_id)
+	FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+	FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
 CREATE TABLE book_authors (
 	book_id INT,
 	author_id INT,
-	FOREIGN KEY (book_id) REFERENCES books(book_id),
-	FOREIGN KEY (author_id) REFERENCES authors(author_id)
+	FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE,
+	FOREIGN KEY (author_id) REFERENCES authors(author_id) ON DELETE CASCADE
 );
