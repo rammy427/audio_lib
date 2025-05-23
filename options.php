@@ -14,7 +14,7 @@ $result = mysqli_query($connection, $query);
         <?php include "navigation.html"; ?>
         <h1 class="mt-5 mb-3 text-center">Editar catálogo</h1>
         <div class="row mx-auto mb-5">
-            <button class="col-9 mx-auto btn btn-lg btn-success"><i class="bi bi-plus mx-1"></i>Añadir audiolibro</button>
+            <a class="col-9 mx-auto btn btn-lg btn-success" href="edit.php"><i class="bi bi-plus mx-1"></i>Añadir audiolibro</a>
         </div>  
         <div class="table-responsive w-75 mx-auto">
             <table id="datatable" class="table table-striped table-sm">
@@ -54,8 +54,8 @@ $result = mysqli_query($connection, $query);
                             print "</td>";
                             print "<td>";
                                 print "<button class=\"btn btn-lg btn-primary text-white mx-1\"><i class=\"bi bi-pencil-square\"></i></button>";
-                                print '<a href="delete.php?id='.$row["book_id"].'">';
-                                    print "<button class=\"btn btn-lg btn-danger\"><i class=\"bi bi-trash3-fill\"></i></button>";
+                                print '<a class="btn btn-lg btn-danger" href="delete.php?id='.$row["book_id"].'">';
+                                    print "<i class=\"bi bi-trash3-fill\"></i>";
                                 print "</a>";
                             print "</td>";
                         print "</tr>";
