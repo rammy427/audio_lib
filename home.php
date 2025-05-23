@@ -4,6 +4,7 @@
         <?php include "header.html"; ?>
     </head>
     <body>
+        <?php include "navigation.html"; ?>
         <h1 class="my-5 text-center">Biblioteca para ciegos</h1>
         <div class="row mx-auto">
             <a class="col-9 mx-auto btn btn-lg btn-success my-3 fs-1" href="search.php">Buscar audiolibros</a>

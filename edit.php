@@ -11,6 +11,7 @@ $result = mysqli_query($connection, $query);
         <?php include "header.html"; ?>
     </head>
     <body>
+        <?php include "navigation.html"; ?>
         <h1 class="mt-5 mb-3 text-center">Editar catálogo</h1>
         <div class="row mx-auto mb-5">
             <button class="col-9 mx-auto btn btn-lg btn-success"><i class="bi bi-plus mx-1"></i>Añadir audiolibro</button>

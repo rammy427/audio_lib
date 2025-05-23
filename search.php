@@ -11,6 +11,7 @@ $result = mysqli_query($connection, $query);
         <?php include "header.html"; ?>
     </head>
     <body>
+        <?php include "navigation.html"; ?>
         <h1 class="my-5 text-center">Buscar audiolibros</h1>
         <div class="table-responsive w-75 mx-auto">
             <table id="datatable" class="table table-striped table-sm">
