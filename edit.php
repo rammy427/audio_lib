@@ -30,7 +30,8 @@ if (isEditing())
     <body>
         <?php include "navigation.html"; ?>
         <h1 class="my-5 text-center">Añadir o editar audiolibro</h1>
-        <form class="col-sm-6 mx-auto" action="insert.php" method="post">
+        <form class="col-sm-6 mx-auto" method="post"
+        <?php isEditing() ? print "action=\"insert.php?id=$book_id\"" : print "action=\"insert.php\"" ?>>
             <div class="row">
                 <div class="col">
                     <label for="title">Título del libro</label>
