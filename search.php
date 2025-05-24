@@ -46,7 +46,7 @@ $result = mysqli_query($connection, $query);
                                 print $row["isbn"];
                             print "</td>";
                             print "<td>";
-                                print $row["audio_path"];
+                                print '<a class="btn btn-primary" href='.$row["audio_path"].' download>Descargar</a>';
                             print "</td>";
                         print "</tr>";
                     }

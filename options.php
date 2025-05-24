@@ -25,7 +25,6 @@ $result = mysqli_query($connection, $query);
                         <th scope="col">Apellido de Autor</th>
                         <th scope="col">Año de Publicación</th>
                         <th scope="col">ISBN</th>
-                        <th scope="col">Archivo</th>
                         <th scope="col">Opciones</th>
                     </tr>
                 </thead>
@@ -48,9 +47,6 @@ $result = mysqli_query($connection, $query);
                             print "</td>";
                             print "<td>";
                                 print $row["isbn"];
-                            print "</td>";
-                            print "<td>";
-                                print $row["audio_path"];
                             print "</td>";
                             print "<td>";
                                 print '<a class="btn btn-lg btn-primary text-white mx-1" href="edit.php?id='.$row["book_id"].'">';
