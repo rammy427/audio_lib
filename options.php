@@ -16,7 +16,7 @@ $result = mysqli_query($connection, $query);
         <div class="row mx-auto mb-5">
             <a class="col-9 mx-auto btn btn-lg btn-success" href="edit.php"><i class="bi bi-plus mx-1"></i>Añadir audiolibro</a>
         </div>  
-        <div class="table-responsive w-75 mx-auto">
+        <div class="table-responsive w-75 mx-auto fs-5">
             <table id="datatable" class="table table-striped table-sm">
                 <thead>
                     <tr>

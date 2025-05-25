@@ -21,14 +21,14 @@ $result = mysqli_query($connection, $query);
     </head>
     <body>
         <?php include "navigation.html"; ?>
-        <h1 class="my-5 text-center">Buscar audiolibros</h1>
+        <h1 class="mt-5 mb-3 text-center">Buscar audiolibros</h1>
         <div class="row mx-auto mb-5">
             <a class="col-9 mx-auto btn btn-lg btn-success"
             <?php (isFiltered()) ? print 'href="search.php"' : print 'href="search.php?read"' ?>>
                 <i class="bi bi-book-fill mx-2"></i>Filtrar libros que estoy escuchando
             </a>
         </div>
-        <div class="table-responsive w-75 mx-auto">
+        <div class="table-responsive w-75 mx-auto fs-5">
             <table id="datatable" class="table table-striped table-sm">
                 <thead>
                     <tr>
@@ -37,7 +37,7 @@ $result = mysqli_query($connection, $query);
                         <th scope="col">Apellido de Autor</th>
                         <th scope="col">Año de Publicación</th>
                         <th scope="col">ISBN</th>
-                        <th scope="col">Archivo</th>
+                        <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -62,7 +62,9 @@ $result = mysqli_query($connection, $query);
                                 print $row["isbn"];
                             print "</td>";
                             print "<td>";
-                                print '<a class="btn btn-primary" href='.$row["audio_path"].' download>Descargar</a>';
+                                print '<a class="btn btn-lg btn-primary" href='.$row["audio_path"].' download>';
+                                    print '<i class="bi bi-download mx-2"></i>Descargar';
+                                print '</a>';
                             print "</td>";
                             print "<td>";
                                 print '<a class="btn btn-lg btn-success" href="read.php?id='.$row["book_id"].'">';
