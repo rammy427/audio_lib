@@ -9,3 +9,6 @@ INSERT INTO authors VALUES
 (3, "Homero", NULL);
 
 INSERT INTO book_authors VALUES (1, 1), (2, 2), (3, 3);
+
+INSERT INTO users VALUES
+(1, "sebastian.ramirez4@upr.edu", "password", "Sebastián", "Ramírez");
